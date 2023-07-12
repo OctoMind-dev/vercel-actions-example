@@ -9,7 +9,7 @@ jobs:
   octomind:
     if: ${{ github.event.deployment_status.state == 'success' && github.head_ref != '' }}
     name: 🚀 trigger octomind e2e tests 🚀
-    uses: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: OctoMind-dev/automagically-action-execute@v1
         with:
