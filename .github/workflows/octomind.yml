@@ -6,6 +6,11 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "${{ github.event.deployment_status }} ${{ github.head_ref }}"
+
   octomind:
     if: ${{ github.event.deployment_status.state == 'success' && github.head_ref != '' }}
     name: 🚀 trigger octomind e2e tests 🚀
