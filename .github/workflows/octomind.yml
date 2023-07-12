@@ -9,7 +9,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "${{ github.event.deployment_status.deployment_url }} ${{ github.deployment.payload }} ${{ github.issue.number }} ${{ github.pull_request.number }} ${{ github.number }}"
+      - run: echo "${{ github.event.deployment_status.target_url }} ${{ github.deployment_status.ref }} ${{ github.deployment_status.sha }}"
 
   octomind:
     if: ${{ github.event.deployment_status.state }} == 'success'
