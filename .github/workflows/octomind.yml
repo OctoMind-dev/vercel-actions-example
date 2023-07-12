@@ -12,7 +12,7 @@ jobs:
       - run: echo "${{ github.event.deployment_status.deployment_url }} ${{ github.deployment.payload }} ${{ github.issue.number }} ${{ github.pull_request.number }} ${{ github.number }}"
 
   octomind:
-    if: ${{ github.event.deployment_status.state == 'success'
+    if: ${{ github.event.deployment_status.state }} == 'success'
     name: 🚀 trigger octomind e2e tests 🚀
     runs-on: ubuntu-latest
     steps:
