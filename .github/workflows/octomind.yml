@@ -1,0 +1,17 @@
+on:
+  deployment_status
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  octomind:
+    if: ${{ github.event.deployment_status.state == 'success' && github.head_ref != '' }}
+    name: 🚀 trigger octomind e2e tests 🚀
+    uses: ubuntu-latest
+    steps:
+      - uses: OctoMind-dev/automagically-action-execute@v1
+        with:
+          url: ${{ github.event.deployment_status.target_url }}
+          token: ${{ secrets.AUTOMAGICALLY_TOKEN }}
