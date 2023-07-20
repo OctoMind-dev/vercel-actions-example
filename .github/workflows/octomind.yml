@@ -16,7 +16,8 @@ jobs:
     name: 🚀 trigger octomind e2e tests 🚀
     runs-on: ubuntu-latest
     steps:
-      - uses: OctoMind-dev/automagically-action-execute@v1
+      - uses: OctoMind-dev/automagically-action-execute@v2
         with:
+          testTargetId: c0f2336b-5afb-488b-879d-fd3a3b11bd3c
           url: ${{ github.event.deployment_status.target_url }}
           token: ${{ secrets.AUTOMAGICALLY_TOKEN }}
