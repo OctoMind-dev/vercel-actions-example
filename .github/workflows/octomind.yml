@@ -6,14 +6,9 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "${{ github.event.deployment_status.target_url }} ${{ github.deployment_status.ref }} ${{ github.deployment_status.sha }}"
-
   octomind:
     if: ${{ github.event.deployment_status.state }} == 'success'
-    name: 🚀 trigger octomind e2e tests 🚀
+    name: 🚀🐙 trigger octomind e2e tests 🚀🐙
     runs-on: ubuntu-latest
     steps:
       - uses: OctoMind-dev/automagically-action-execute@v2
