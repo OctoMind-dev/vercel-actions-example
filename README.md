@@ -19,7 +19,7 @@ concurrency:
 
 jobs:
   octomind:
-    if: ${{ github.event.deployment_status.state }} == 'success'
+    if: ${{ github.event.deployment_status.state  == 'success' }}
     name: 🚀🐙 trigger octomind e2e tests 🚀🐙
     runs-on: ubuntu-latest
     steps:
