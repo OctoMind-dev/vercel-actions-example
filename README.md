@@ -13,5 +13,5 @@ https://github.com/OctoMind-dev/vercel-actions-example/blob/dd5380f82cfed6439be6
 
 See [🚀🐙 trigger octomind e2e tests 🚀🐙](https://github.com/OctoMind-dev/vercel-actions-example/actions/runs/5613582651/job/15209923666?pr=1) for a successful actions run after a vercel deployment.
 
-Follow the setup workflow as described in our [docs](https://docs.octomind.dev/quickstart-vercel) to get the required data.
+Follow the setup workflow as described in our [docs](https://octomind.dev/docs/integrations/quickstart-Vercel) to get the required data.
 
