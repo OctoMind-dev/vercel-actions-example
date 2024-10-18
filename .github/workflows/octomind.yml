@@ -16,3 +16,4 @@ jobs:
           testTargetId: c0f2336b-5afb-488b-879d-fd3a3b11bd3c
           url: ${{ github.event.deployment_status.target_url }}
           token: ${{ secrets.AUTOMAGICALLY_TOKEN }}
+          blocking: true
