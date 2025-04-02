@@ -9,7 +9,7 @@ export default function Home() {
 
     useEffect(() => {
         if (!fetchResult) {
-            void fetch("https://httpbin.org/post", {
+            void fetch(`${window.location.origin}/rewrite/abc`, {
                 method: "POST",
             }).then((res) => {
                 setFetchResult(res.url);
