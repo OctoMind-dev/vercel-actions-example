@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    rewrites: [
+    rewrites: () => [
     // rewrite
     {
         source: "/rewrite/:path*",
